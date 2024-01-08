@@ -15,4 +15,5 @@ model Message {
   email String
   name  String
   message String
+  sent Boolean @default(false)
 }
