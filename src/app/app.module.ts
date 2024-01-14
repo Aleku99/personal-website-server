@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { MessageModule } from './message/message.module';
-import { PrismaModule } from './prisma/prisma.module';
+import { MessageModule } from '../message/message.module';
+import { PrismaModule } from '../prisma/prisma.module';
 import { ScheduleModule } from '@nestjs/schedule';
-import { EmailModule } from './email/email.module';
+import { EmailModule } from '../email/email.module';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -22,5 +23,6 @@ import { MailerModule } from '@nestjs-modules/mailer';
     PrismaModule,
     EmailModule,
   ],
+  controllers: [AppController],
 })
 export class AppModule {}
