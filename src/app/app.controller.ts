@@ -5,6 +5,6 @@ export class AppController {
   @Get('/health')
   @HttpCode(200)
   healthCheck() {
-    return {};
+    return;
   }
 }
