@@ -10,7 +10,7 @@ export class EmailService {
     private messageService: MessageService,
   ) {}
 
-  @Cron(CronExpression.EVERY_HOUR)
+  @Cron(CronExpression.EVERY_6_HOURS)
   async handleCron() {
     const emails = await this.messageService.getUnsentMessages();
 
